@@ -1,0 +1,27 @@
+{
+  "private": "true",
+  "version": "2.0.0",
+  "packageManager": "pnpm@7.13.4",
+  "author": "Léo Coletta <contact@leo-coletta.fr>",
+  "scripts": {
+    "build": "rimraf packages/*/dist && pnpm -r run build",
+    "release": "pnpm release:prepare && pnpm release:push-tags",
+    "release:prepare": "changelogen && pnpm -r exec cp ../../CHANGELOG.md && bumpp package.json packages/**/package.json",
+    "release:push-tag": "PKG_VERSION=$(node -e \"console.log(require('./package.json').version)\") && git add . && git -m \"chore(release): Release version ${PKG_VERSION}\" && git tag -a \"v${PKG_VERSION}\" && git push --tags",
+    "release:publish": "pnpm -r publish",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "@ts-client": "pnpm --filter @lyonkit/ts-client"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.27.0",
+    "bumpp": "8.2.1",
+    "changelogen": "0.3.5",
+    "eslint": "8.25.0",
+    "typescript": "4.8.4"
+  },
+  "volta": {
+    "node": "16.18.0",
+    "npm": "8.19.2"
+  }
+}
