@@ -6,10 +6,7 @@
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
     "build": "rimraf packages/*/dist && pnpm -r run build",
-    "release": "pnpm release:prepare && pnpm release:push-tags",
-    "release:prepare": "changelogen && pnpm -r exec cp ../../CHANGELOG.md && bumpp package.json packages/**/package.json",
-    "release:push-tag": "PKG_VERSION=$(node -e \"console.log(require('./package.json').version)\") && git add . && git -m \"chore(release): Release version ${PKG_VERSION}\" && git tag -a \"v${PKG_VERSION}\" && git push --tags",
-    "release:publish": "pnpm -r publish",
+    "release": "changelogen --release --recursive",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "@ts-client": "pnpm --filter @lyonkit/ts-client"
