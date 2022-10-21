@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.1.1
+
+
+### 📖 Documentation
+
+  - **ts-client:** Add ImageInput docs (b3b4b11)
+
+### 📦 Build
+
+  - Change release script (4aa48d7)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.1.0
 
 
