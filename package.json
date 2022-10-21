@@ -1,7 +1,7 @@
 {
   "name": "lyonkit-ts-client",
   "private": "true",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "packageManager": "pnpm@7.13.6",
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "0.27.0",
     "bumpp": "8.2.1",
-    "changelogen": "0.3.5",
+    "changelogen": "file:.yalc/changelogen",
     "eslint": "8.25.0",
     "typescript": "4.8.4"
   },

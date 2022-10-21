@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.1.0
+
+
+### 🚀 Enhancements
+
+  - Initial commit (b38eda1)
+
+### 🏡 Chore
+
+  - Add package name (797eb1c)
+  - Gitignore yalc (c473909)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ### [1.10.1](https://github.com/leo91000/lyonkit-api/compare/v1.10.0...v1.10.1) (2022-10-14)
 
 ## [1.10.0](https://github.com/leo91000/lyonkit-api/compare/v1.9.6...v1.10.0) (2022-10-14)
