@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.1.2
+
+
+### 📖 Documentation
+
+  - Add package description (443f291)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.1.1
 
 
