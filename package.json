@@ -1,4 +1,5 @@
 {
+  "name": "lyonkit-ts-client",
   "private": "true",
   "version": "2.0.0",
   "packageManager": "pnpm@7.13.6",
