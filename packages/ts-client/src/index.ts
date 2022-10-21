@@ -3,13 +3,22 @@ import { $fetch } from 'ohmyfetch'
 import { joinURL } from 'ufo'
 
 export interface ImageInput {
+  /**
+   * Represents the `alt` attributes for `<img>` html tag
+   */
   alt?: string | null | undefined
+  /**
+   * The image to upload
+   */
   image: Blob | File
 }
 
 export interface ImageOutput {
   id: number
   publicUrl: string
+  /**
+   * A low resolution version of the image to display as a placeholder when waiting for actual image
+   */
   lazyImage: {
     id: number
     publicUrl: string

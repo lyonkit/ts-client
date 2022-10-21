@@ -16,8 +16,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "unbuild",
-    "prepare": "unbuild",
-    "release": ""
+    "prepare": "unbuild"
   },
   "dependencies": {
     "ohmyfetch": "^0.4.19",
