@@ -23,9 +23,9 @@ importers:
       '@nuxt/module-builder': ^0.2.0
       '@nuxt/schema': ^3.0.0-rc.12
     dependencies:
-      '@lyonkit/ts-client': link:../ts-client
       '@nuxt/kit': 3.0.0-rc.12
     devDependencies:
+      '@lyonkit/ts-client': link:../ts-client
       '@nuxt/module-builder': 0.2.0
       '@nuxt/schema': 3.0.0-rc.12
 

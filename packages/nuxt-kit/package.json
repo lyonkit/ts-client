@@ -20,12 +20,15 @@
     "build": "nuxt-module-build",
     "prepare": "nuxt-module-build"
   },
+  "peerDependencies": {
+    "@lyonkit/ts-client": "workspace:^"
+  },
   "dependencies": {
-    "@lyonkit/ts-client": "workspace:^",
     "@nuxt/kit": "^3.0.0-rc.12"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.0",
-    "@nuxt/schema": "^3.0.0-rc.12"
+    "@nuxt/schema": "^3.0.0-rc.12",
+    "@lyonkit/ts-client": "workspace:^"
   }
 }
