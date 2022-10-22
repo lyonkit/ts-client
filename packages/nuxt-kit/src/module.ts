@@ -55,7 +55,5 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
       addPlugin(resolveRuntimeModule('./write/plugin'))
       addImports({ name: 'useLyonkit', as: 'useLyonkit', from: resolveRuntimeModule('./write/composables') })
     }
-
-    nuxt.options.css.push('@lyonkit/bloks/assets/style.css')
   },
 })
