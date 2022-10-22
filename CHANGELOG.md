@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.2.1
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Use peerDependencies instead of direct dependency (7dc7d35)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.0
 
 
