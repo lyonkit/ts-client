@@ -1,0 +1,31 @@
+{
+  "name": "@lyonkit/nuxt",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Nuxt module integration for lyonkit typescript client",
+  "exports": {
+    ".": {
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build",
+    "prepare": "nuxt-module-build"
+  },
+  "dependencies": {
+    "@lyonkit/ts-client": "workspace:^",
+    "@nuxt/kit": "^3.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^0.2.0",
+    "@nuxt/schema": "^3.0.0-rc.12"
+  }
+}

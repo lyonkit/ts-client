@@ -1,21 +1,22 @@
 {
   "name": "lyonkit-ts-client",
-  "description": "Lyonkit typescript clients and related packages",
-  "private": "true",
   "version": "2.1.2",
+  "private": "true",
   "packageManager": "pnpm@7.13.6",
+  "description": "Lyonkit typescript clients and related packages",
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
     "build": "rimraf packages/*/dist && pnpm -r run build",
     "release": "changelogen --release --recursive",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "@ts-client": "pnpm --filter @lyonkit/ts-client"
+    "@ts-client": "pnpm --filter @lyonkit/ts-client",
+    "@nuxt": "pnpm --filter @lyonkit/nuxt"
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.27.0",
     "bumpp": "8.2.1",
-    "changelogen": "file:.yalc/changelogen",
+    "changelogen": "0.3.5",
     "eslint": "8.25.0",
     "typescript": "4.8.4"
   },
