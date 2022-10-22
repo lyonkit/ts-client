@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.2.0
+
+
+### 🚀 Enhancements
+
+  - **nuxt:** Add nuxt module (0e4d145)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.1.2
 
 
