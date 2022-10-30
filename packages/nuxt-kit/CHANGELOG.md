@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.2.2
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Remove css import for nuxt module (187c599)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.1
 
 
