@@ -1,10 +1,9 @@
+import { resolve } from 'node:path'
 import {
   addImports,
-  addPlugin,
+  addPluginTemplate,
   addTemplate,
-  createResolver,
   defineNuxtModule,
-  resolveModule,
 } from '@nuxt/kit'
 import type { NuxtModule } from '@nuxt/schema'
 import { name, version } from '../package.json'
@@ -35,25 +34,35 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
     readOnly: true,
   },
   async setup(opts, nuxt) {
-    const { resolve } = createResolver(import.meta.url)
-    const resolveRuntimeModule = (path: string) => resolveModule(path, { paths: resolve('./runtime') })
-
     // Inject options via virtual template
-    nuxt.options.alias['#lyonkit-options'] = addTemplate({
-      filename: 'lyonkit-options.mjs',
-      getContents: () => `
-        export const apiKey = ${JSON.stringify(opts.apiKey ?? null, null, 2)}
-        export const readOnly = ${JSON.stringify(opts.readOnly ?? false, null, 2)}
-      `,
+    nuxt.options.alias['#lyonkit'] = addTemplate({
+      filename: 'lyonkit.mjs',
+      src: resolve(__dirname, 'runtime/templates/composable'),
+      options: {
+        config: JSON.stringify(opts, null, 2),
+      },
     }).dst!
 
-    if (opts.readOnly) {
-      addPlugin(resolveRuntimeModule('./read/plugin'))
-      addImports({ name: 'useLyonkit', as: 'useLyonkit', from: resolveRuntimeModule('./read/composables') })
-    }
-    else {
-      addPlugin(resolveRuntimeModule('./write/plugin'))
-      addImports({ name: 'useLyonkit', as: 'useLyonkit', from: resolveRuntimeModule('./write/composables') })
-    }
+    addPluginTemplate({
+      filename: 'lyonkit-plugin.mjs',
+      src: resolve(__dirname, 'runtime/templates/plugin'),
+      options: {
+        apiKey: JSON.stringify(opts.apiKey, null, 2),
+        readOnly: JSON.stringify(opts.readOnly ?? false, null, 2),
+        createLyonkitClientImport: JSON.stringify(opts.readOnly ? 'createLyonkitWriteApiClient' : 'createLyonkitReadonlyApiClient', null, 2),
+      },
+    })
+
+    addImports({
+      name: 'useLyonkit',
+      from: '#lyonkit',
+      as: 'useLyonkit',
+    })
+
+    nuxt.hook('prepare:types', (config) => {
+      config.references.push({
+        path: opts.readOnly ? '@lyonkit/nuxt/runtime/types/readonly.d.ts' : '@lyonkit/nuxt/runtime/types/write.d.ts',
+      })
+    })
   },
 })
