@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.2.6
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix nuxt types (816b8b3)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.5
 
 
