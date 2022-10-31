@@ -16,7 +16,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "0.27.0",
     "bumpp": "8.2.1",
-    "changelogen": "file:.yalc/changelogen",
+    "changelogen": "0.3.5",
     "eslint": "8.26.0",
     "typescript": "4.8.4"
   },
