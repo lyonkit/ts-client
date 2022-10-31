@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.2.3
+
+
+### 💅 Refactors
+
+  - Refactor nuxt module to use templates (55ae239)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.2
 
 

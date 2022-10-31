@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.2.3
+
+
+### 💅 Refactors
+
+  - Refactor nuxt module to use templates (55ae239)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.2
 
 
