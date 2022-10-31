@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.2.4
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix template (f7ee4d2)
+
+### 🏡 Chore
+
+  - Remove yalc references (a5c056d)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.3
 
 

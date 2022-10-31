@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.2.4
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix template (f7ee4d2)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.3
 
 
