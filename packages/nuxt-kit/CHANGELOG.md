@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v2.2.5
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix plugin (694ca7d)
+
+### 🏡 Chore
+
+  - **nuxt:** Increase version of nuxt package (583912a)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.4
 
 

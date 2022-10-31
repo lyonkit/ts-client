@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.2.5
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix plugin (694ca7d)
+
+### 🏡 Chore
+
+  - **nuxt:** Increase version of nuxt package (583912a)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.4
 
 
