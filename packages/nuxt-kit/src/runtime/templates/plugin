@@ -3,7 +3,7 @@ import { defineNuxtPlugin, useRuntimeConfig } from '#imports'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
-  const apiKey = '${options.apiKey}' || config.public?.lyonkitApiKey ?? config.lyonkitApiKey
+  const apiKey = ('${options.apiKey}' || null) ?? config.public?.lyonkitApiKey ?? config.lyonkitApiKey
   const readOnly = ${options.readOnly}
 
   if (!apiKey) {
