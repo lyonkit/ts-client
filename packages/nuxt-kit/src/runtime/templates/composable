@@ -1,4 +1,4 @@
-export const lyonkitConfig = <% config %>
+export const lyonkitConfig = <% print(JSON.stringify(options.config, null, 2)) %>
 
 export function useLyonkit() {
   const nuxtApp = useNuxtApp()

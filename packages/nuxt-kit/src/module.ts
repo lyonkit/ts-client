@@ -39,7 +39,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
       filename: 'lyonkit.mjs',
       src: resolve(__dirname, 'runtime/templates/composable'),
       options: {
-        config: JSON.stringify(opts, null, 2),
+        config: opts,
       },
     }).dst!
 
@@ -47,9 +47,8 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
       filename: 'lyonkit-plugin.mjs',
       src: resolve(__dirname, 'runtime/templates/plugin'),
       options: {
-        apiKey: JSON.stringify(opts.apiKey, null, 2),
-        readOnly: JSON.stringify(opts.readOnly ?? false, null, 2),
-        createLyonkitClientImport: JSON.stringify(opts.readOnly ? 'createLyonkitWriteApiClient' : 'createLyonkitReadonlyApiClient', null, 2),
+        apiKey: opts.apiKey,
+        readOnly: opts.readOnly ?? false,
       },
     })
 
@@ -61,7 +60,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     nuxt.hook('prepare:types', (config) => {
       config.references.push({
-        path: opts.readOnly ? '@lyonkit/nuxt/runtime/types/readonly.d.ts' : '@lyonkit/nuxt/runtime/types/write.d.ts',
+        path: opts.readOnly ? resolve(__dirname, 'runtime/types/readonly.d.ts') : resolve(__dirname, 'runtime/types/write.d.ts'),
       })
     })
   },

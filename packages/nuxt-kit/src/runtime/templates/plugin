@@ -1,10 +1,10 @@
-import { <% createLyonkitClientImport %> as createLyonkitClient } from '@lyonkit/ts-client'
+import { <% if (options.readOnly) { %> createLyonkitReadonlyApiClient <% } else { %> createLyonkitWriteApiClient <% } %> as createLyonkitClient } from '@lyonkit/ts-client'
 import { defineNuxtPlugin, useRuntimeConfig } from '#imports'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
-  const apiKey = <% apiKey %> || config.public?.lyonkitApiKey ?? config.lyonkitApiKey
-  const readOnly = <% readOnly %>
+  const apiKey = '${options.apiKey}' || config.public?.lyonkitApiKey ?? config.lyonkitApiKey
+  const readOnly = ${options.readOnly}
 
   if (!apiKey) {
     console.error('[@lyonkit/nuxt] Missing apiKey')
