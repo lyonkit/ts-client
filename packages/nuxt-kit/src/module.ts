@@ -48,7 +48,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     addPluginTemplate({
       filename: 'lyonkit-plugin.mjs',
-      src: resolveRuntimeModule('./runtime/templates/plugin'),
+      src: resolve(__dirname, './runtime/templates/plugin'),
       options: {
         apiKey: opts.apiKey,
         readOnly: opts.readOnly ?? false,
@@ -57,7 +57,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     addImports({
       name: 'useLyonkit',
-      from: resolve(__dirname, 'runtime/imports/lyonkit.ts'),
+      from: resolveRuntimeModule('runtime/imports/lyonkit.ts'),
       as: 'useLyonkit',
     })
 
