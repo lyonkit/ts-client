@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.3.1
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix auto imports path (eda7609)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.3.0
 
 
