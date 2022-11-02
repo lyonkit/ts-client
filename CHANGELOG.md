@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.3.7
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix auto imports path (1766ba0)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.3.6
 
 
