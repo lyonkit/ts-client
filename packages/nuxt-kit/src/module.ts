@@ -54,7 +54,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     addImports({
       name: 'useLyonkit',
-      from: resolve(__dirname, 'imports/lyonkit.ts'),
+      from: resolve(__dirname, 'runtime/imports/lyonkit.ts'),
       as: 'useLyonkit',
     })
 
