@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.3.3
+
+
+### 🩹 Fixes
+
+  - **nuxt:** Fix auto imports path (4f5824f)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.3.2
 
 
