@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.3.0
+
+
+### 🚀 Enhancements
+
+  - **nuxt:** Enable auto import types by using tricks (b7e9520)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.2.6
 
 
