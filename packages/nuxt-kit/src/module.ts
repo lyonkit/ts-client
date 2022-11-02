@@ -2,8 +2,8 @@ import { resolve } from 'node:path'
 import {
   addImports,
   addPluginTemplate,
-  addTemplate,
-  defineNuxtModule,
+  addTemplate, createResolver,
+  defineNuxtModule, resolveModule,
 } from '@nuxt/kit'
 import type { NuxtModule } from '@nuxt/schema'
 import { name, version } from '../package.json'
@@ -34,6 +34,9 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
     readOnly: true,
   },
   async setup(opts, nuxt) {
+    const { resolve: metaResolver } = createResolver(import.meta.url)
+    const resolveRuntimeModule = (path: string) => resolveModule(path, { paths: metaResolver('./runtime') })
+
     // Inject options via virtual template
     nuxt.options.alias['#lyonkit'] = addTemplate({
       filename: 'lyonkit.mjs',
@@ -45,7 +48,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     addPluginTemplate({
       filename: 'lyonkit-plugin.mjs',
-      src: resolve(__dirname, 'runtime/templates/plugin'),
+      src: resolveRuntimeModule('./runtime/templates/plugin'),
       options: {
         apiKey: opts.apiKey,
         readOnly: opts.readOnly ?? false,
