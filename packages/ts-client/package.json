@@ -19,7 +19,7 @@
     "prepare": "unbuild"
   },
   "dependencies": {
-    "ohmyfetch": "^0.4.20",
+    "ohmyfetch": "^0.4.21",
     "ufo": "^0.8.6"
   },
   "devDependencies": {
