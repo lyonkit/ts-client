@@ -19,6 +19,10 @@ export interface ModuleOptions {
    * @default false
    */
   readOnly?: boolean
+  /**
+   * Endpoint URL
+   */
+  endpoint?: string
 }
 
 export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
@@ -52,6 +56,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
       options: {
         apiKey: opts.apiKey,
         readOnly: opts.readOnly ?? false,
+        endpoint: opts.endpoint,
       },
     })
 

@@ -5,12 +5,13 @@ export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
   const apiKey = ('${options.apiKey}' || null) ?? config.public?.lyonkitApiKey ?? config.lyonkitApiKey
   const readOnly = ${options.readOnly}
+  const endpoint = <% print(JSON.stringify(options.endpoint ?? null, null, 2)) %> || undefined
 
   if (!apiKey) {
     console.error('[@lyonkit/nuxt] Missing apiKey')
   }
 
-  const lyonkit = createLyonkitClient({ apiKey, readOnly })
+  const lyonkit = createLyonkitClient({ apiKey, readOnly, endpoint })
 
   return {
     provide: {
