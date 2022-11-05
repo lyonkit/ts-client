@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.4.0
+
+
+### 🚀 Enhancements
+
+  - **nuxt:** Add custom endpoint option (6dc3c07)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.3.7
 
 

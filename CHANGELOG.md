@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.4.0
+
+
+### 🚀 Enhancements
+
+  - **ts-client:** Add support for file upload (06287cb)
+  - **nuxt:** Add custom endpoint option (6dc3c07)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.3.7
 
 

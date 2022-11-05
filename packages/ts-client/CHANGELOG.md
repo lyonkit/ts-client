@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.4.0
+
+
+### 🚀 Enhancements
+
+  - **ts-client:** Add support for file upload (06287cb)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.1.1
 
 
