@@ -111,7 +111,27 @@ export interface LocaleOutput {
   updatedAt: String
 }
 
-interface LyonkitClientOptions { endpoint?: string; apiKey: string }
+export interface FileFilter {
+  tag?: string
+}
+
+export interface FileOutput {
+  id: number
+  key: string
+  publicUrl: string
+  tags: string[]
+  metadata: Record<string, string>
+  createdAt: string
+  updatedAt: string
+}
+
+export interface FileInput {
+  file: File
+  tags?: string[]
+  metadata?: Record<string, string>
+}
+
+export interface LyonkitClientOptions { endpoint?: string; apiKey: string }
 
 export function createLyonkitReadonlyApiClient({ endpoint = 'https://lyonkit.leo-coletta.fr', apiKey }: LyonkitClientOptions) {
   const fetchClient: $Fetch = $fetch.create({
@@ -172,6 +192,13 @@ export function createLyonkitReadonlyApiClient({ endpoint = 'https://lyonkit.leo
     return fetchClient('/locale')
   }
 
+  // FILE
+  async function listFiles(filter: FileFilter = {}): Promise<FileOutput[]> {
+    return fetchClient('/file', {
+      query: filter,
+    })
+  }
+
   return {
     fetchClient,
     listImages,
@@ -184,6 +211,7 @@ export function createLyonkitReadonlyApiClient({ endpoint = 'https://lyonkit.leo
     listQuotes,
     getQuote,
     getLocales,
+    listFiles,
   }
 }
 
@@ -282,6 +310,30 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     })
   }
 
+  // FILE
+  async function uploadFile(input: FileInput): Promise<FileOutput> {
+    const uploadRequest: FileOutput & { uploadUrl: string } = await fetchClient('/file', {
+      method: 'POST',
+      body: {
+        contentType: input.file.type,
+        contentLength: input.file.size,
+        fileName: input.file.name,
+        tags: input.tags ?? [],
+        metadata: input.metadata ?? {},
+      },
+    })
+
+    await $fetch(uploadRequest.uploadUrl, {
+      method: 'PUT',
+      headers: {
+        'x-amz-acl': 'public-read',
+      },
+      body: input.file,
+    })
+
+    return uploadRequest
+  }
+
   return {
     fetchClient,
     ...readonlyMethods,
@@ -303,5 +355,6 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     getGitJsonFile,
     updateGitJsonFile,
     updateLocale,
+    uploadFile,
   }
 }
