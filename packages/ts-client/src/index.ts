@@ -337,7 +337,7 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
   }
 
   async function updateFile(id: number, input: Partial<FileInput>): Promise<FileOutput> {
-    const updateRequest: FileOutput & { uploadUrl: string } = await fetchClient(`/file/${id}`, {
+    const updateRequest: FileOutput & { uploadUrl?: string } = await fetchClient(`/file/${id}`, {
       method: 'PUT',
       body: {
         file: input.file
@@ -352,13 +352,15 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
       },
     })
 
-    await $fetch(updateRequest.uploadUrl, {
-      method: 'PUT',
-      headers: {
-        'x-amz-acl': 'public-read',
-      },
-      body: input.file,
-    })
+    if (updateRequest.uploadUrl && input.file) {
+      await $fetch(updateRequest.uploadUrl, {
+        method: 'PUT',
+        headers: {
+          'x-amz-acl': 'public-read',
+        },
+        body: input.file,
+      })
+    }
 
     return updateRequest
   }
