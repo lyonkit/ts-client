@@ -1,6 +1,6 @@
 {
   "name": "lyonkit-ts-client",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "private": "true",
   "packageManager": "pnpm@7.14.2",
   "description": "Lyonkit typescript clients and related packages",

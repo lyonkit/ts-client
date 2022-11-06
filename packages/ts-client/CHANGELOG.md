@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.6.1
+
+
+### 🩹 Fixes
+
+  - **ts-client:** Update file only if present (a60c2ad)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.6.0
 
 
