@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.6.0
+
+
+### 🚀 Enhancements
+
+  - **ts-client:** Add PUT/DELETE support for files (3dd6c34)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.5.0
 
 
