@@ -315,9 +315,11 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     const uploadRequest: FileOutput & { uploadUrl: string } = await fetchClient('/file', {
       method: 'POST',
       body: {
-        contentType: input.file.type,
-        contentLength: input.file.size,
-        fileName: input.file.name,
+        file: {
+          fileName: input.file.name,
+          contentType: input.file.type,
+          contentLength: input.file.size,
+        },
         tags: input.tags ?? [],
         metadata: input.metadata ?? {},
       },
