@@ -1,6 +1,17 @@
 # Changelog
 
 
+## v2.5.0
+
+
+### 🚀 Enhancements
+
+  - **ts-client:** Update to latest file schema changes (51aa063)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.4.0
 
 

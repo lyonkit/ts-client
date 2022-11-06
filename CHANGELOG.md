@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.5.0
+
+
+### 🚀 Enhancements
+
+  - **ts-client:** Update to latest file schema changes (51aa063)
+
+### ❤️  Contributors
+
+- Léo Coletta
+
 ## v2.4.0
 
 
