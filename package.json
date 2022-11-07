@@ -14,7 +14,7 @@
     "@nuxt": "pnpm --filter @lyonkit/nuxt"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.29.3",
+    "@antfu/eslint-config": "0.29.4",
     "bumpp": "8.2.1",
     "changelogen": "0.3.5",
     "eslint": "8.27.0",
