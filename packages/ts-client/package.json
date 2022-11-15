@@ -23,7 +23,7 @@
     "ufo": "^0.8.6"
   },
   "devDependencies": {
-    "typescript": "4.8.4",
+    "typescript": "4.9.3",
     "unbuild": "0.9.4",
     "vitest": "0.25.2"
   }
