@@ -25,11 +25,11 @@
     "@lyonkit/ts-client": "workspace:^"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0-rc.13"
+    "@nuxt/kit": "^3.0.0"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "^0.2.0",
-    "@nuxt/schema": "^3.0.0-rc.13",
+    "@nuxt/module-builder": "^0.2.1",
+    "@nuxt/schema": "^3.0.0",
     "@lyonkit/ts-client": "workspace:^"
   }
 }
