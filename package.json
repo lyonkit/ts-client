@@ -14,10 +14,10 @@
     "@nuxt": "pnpm --filter @lyonkit/nuxt"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.30.1",
+    "@antfu/eslint-config": "0.31.0",
     "bumpp": "8.2.1",
     "changelogen": "0.4.0",
-    "eslint": "8.27.0",
+    "eslint": "8.28.0",
     "typescript": "4.9.3"
   },
   "volta": {
