@@ -1946,7 +1946,7 @@ packages:
       eslint-utils: 3.0.0_eslint@8.28.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 6.0.10
+      postcss-selector-parser: 6.0.11
       semver: 7.3.8
       vue-eslint-parser: 9.1.0_eslint@8.28.0
       xml-name-validator: 4.0.0
@@ -3180,8 +3180,8 @@ packages:
     dependencies:
       enhanced-resolve: 4.5.0
 
-  /postcss-selector-parser/6.0.10:
-    resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
+  /postcss-selector-parser/6.0.11:
+    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
