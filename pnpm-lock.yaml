@@ -33,12 +33,12 @@ importers:
     specifiers:
       ohmyfetch: ^0.4.21
       typescript: 4.9.3
-      ufo: ^1.0.0
+      ufo: ^1.0.1
       unbuild: 1.0.1
       vitest: 0.25.3
     dependencies:
       ohmyfetch: 0.4.21
-      ufo: 1.0.0
+      ufo: 1.0.1
     devDependencies:
       typescript: 4.9.3
       unbuild: 1.0.1
@@ -2672,7 +2672,7 @@ packages:
       acorn: 8.8.1
       pathe: 1.0.0
       pkg-types: 1.0.1
-      ufo: 1.0.0
+      ufo: 1.0.1
     dev: true
 
   /mlly/1.0.0:
@@ -2681,7 +2681,7 @@ packages:
       acorn: 8.8.1
       pathe: 1.0.0
       pkg-types: 1.0.1
-      ufo: 1.0.0
+      ufo: 1.0.1
 
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -3430,6 +3430,9 @@ packages:
 
   /ufo/1.0.0:
     resolution: {integrity: sha512-DRty0ZBNlJ2R59y4mEupJRKLbkLQsc4qtxjpQv78AwEDuBkaUogMc2LkeqW3HddFlw6NwnXYfdThEZOiNgkmmQ==}
+
+  /ufo/1.0.1:
+    resolution: {integrity: sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==}
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
