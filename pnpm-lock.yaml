@@ -19,15 +19,15 @@ importers:
   packages/nuxt-kit:
     specifiers:
       '@lyonkit/ts-client': workspace:^
-      '@nuxt/kit': ^3.2.2
+      '@nuxt/kit': ^3.2.3
       '@nuxt/module-builder': ^0.2.1
-      '@nuxt/schema': ^3.2.2
+      '@nuxt/schema': ^3.2.3
     dependencies:
-      '@nuxt/kit': 3.2.2_rollup@3.17.1
+      '@nuxt/kit': 3.2.3_rollup@3.17.1
     devDependencies:
       '@lyonkit/ts-client': link:../ts-client
       '@nuxt/module-builder': 0.2.1
-      '@nuxt/schema': 3.2.2_rollup@3.17.1
+      '@nuxt/schema': 3.2.3_rollup@3.17.1
 
   packages/ts-client:
     specifiers:
@@ -834,11 +834,11 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@nuxt/kit/3.2.2_rollup@3.17.1:
-    resolution: {integrity: sha512-T3UeLxGSNl7dQgKzmtBbPEkUiiBYgXI+KkemmpkYbQK/l+bWy2f9VQw/Rl0HkQLfRTE2fS8q8jhsOedFiEnHQQ==}
+  /@nuxt/kit/3.2.3_rollup@3.17.1:
+    resolution: {integrity: sha512-wcsVlQLwGkh1cRhAFWHc3uYHdIxFTRNdRUzNyfqoX9DL0Fuga3K75q/PBY0xg1viA9R6F5BMPhc7KDLSWbXtWg==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
-      '@nuxt/schema': 3.2.2_rollup@3.17.1
+      '@nuxt/schema': 3.2.3_rollup@3.17.1
       c12: 1.1.2
       consola: 2.15.3
       defu: 6.1.2
@@ -875,8 +875,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/schema/3.2.2_rollup@3.17.1:
-    resolution: {integrity: sha512-o3O2OqLAMKqb/DlGpK8eJq4tH29NA4OMaohknSSXl35+Nw/qHB5eOLDz+cFxNE+MKHoMj1rRVMCfi/Y/PrCN6g==}
+  /@nuxt/schema/3.2.3_rollup@3.17.1:
+    resolution: {integrity: sha512-AXzRnBivCwn5RpNFWjUkvOPGPSHl5BM+6GfOpSNglPXi0tiQJ+rawSl7no7BkxGDmQ44Bx9AXwvHTrgjpcuo4g==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       c12: 1.1.2
@@ -889,7 +889,7 @@ packages:
       postcss-import-resolver: 2.0.0
       scule: 1.0.0
       std-env: 3.3.2
-      ufo: 1.1.0
+      ufo: 1.1.1
       unimport: 2.2.4_rollup@3.17.1
       untyped: 1.2.2
     transitivePeerDependencies:
@@ -3107,7 +3107,7 @@ packages:
       acorn: 8.8.2
       pathe: 1.1.0
       pkg-types: 1.0.2
-      ufo: 1.1.0
+      ufo: 1.1.1
 
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -3864,6 +3864,10 @@ packages:
 
   /ufo/1.1.0:
     resolution: {integrity: sha512-LQc2s/ZDMaCN3QLpa+uzHUOQ7SdV0qgv3VBXOolQGXTaaZpIur6PwUclF5nN2hNkiTRcUugXd1zFOW3FLJ135Q==}
+    dev: false
+
+  /ufo/1.1.1:
+    resolution: {integrity: sha512-MvlCc4GHrmZdAllBc0iUDowff36Q9Ndw/UzqmEKyrfSzokTd9ZCy1i+IIk5hrYKkjoYVQyNbrw7/F8XJ2rEwTg==}
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
