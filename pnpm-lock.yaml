@@ -19,9 +19,9 @@ importers:
   packages/nuxt-kit:
     specifiers:
       '@lyonkit/ts-client': workspace:^
-      '@nuxt/kit': ^3.0.0
+      '@nuxt/kit': ^3.2.2
       '@nuxt/module-builder': ^0.2.1
-      '@nuxt/schema': ^3.0.0
+      '@nuxt/schema': ^3.2.2
     dependencies:
       '@nuxt/kit': 3.2.2_rollup@3.17.1
     devDependencies:
