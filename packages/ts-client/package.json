@@ -25,6 +25,6 @@
   "devDependencies": {
     "typescript": "4.9.5",
     "unbuild": "1.1.2",
-    "vitest": "0.29.7"
+    "vitest": "0.29.8"
   }
 }
