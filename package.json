@@ -8,7 +8,7 @@
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
     "build": "rimraf packages/*/dist && pnpm -r run build",
-    "release": "standard-version && git push --follow-tags origin main && pnpm -r run publish",
+    "release": "standard-version && git push --follow-tags origin main && pnpm publish -r",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "pnpm -r run typecheck",
