@@ -1,11 +1,12 @@
-import { resolve } from 'node:path'
 import {
   addImports,
   addPluginTemplate,
-  addTemplate, createResolver,
-  defineNuxtModule, resolveModule,
+  addTemplate,
+  defineNuxtModule,
+  resolvePath,
 } from '@nuxt/kit'
 import type { NuxtModule } from '@nuxt/schema'
+import { join } from 'pathe'
 import { name, version } from '../package.json'
 
 export interface ModuleOptions {
@@ -38,13 +39,12 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
     readOnly: true,
   },
   async setup(opts, nuxt) {
-    const { resolve: metaResolver } = createResolver(import.meta.url)
-    const resolveRuntimeModule = (path: string) => resolveModule(path, { paths: metaResolver('./runtime') })
+    const resolveRuntimeModule = (path: string) => join(resolvePath('./runtime'), path)
 
     // Inject options via virtual template
     nuxt.options.alias['#lyonkit'] = addTemplate({
       filename: 'lyonkit.mjs',
-      src: resolve(__dirname, 'runtime/templates/composable'),
+      src: resolveRuntimeModule('./templates/composable'),
       options: {
         config: opts,
       },
@@ -52,7 +52,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     addPluginTemplate({
       filename: 'lyonkit-plugin.mjs',
-      src: resolve(__dirname, './runtime/templates/plugin'),
+      src: resolveRuntimeModule('./templates/plugin'),
       options: {
         apiKey: opts.apiKey,
         readOnly: opts.readOnly ?? false,
@@ -68,7 +68,7 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     nuxt.hook('prepare:types', (config) => {
       config.references.push({
-        path: opts.readOnly ? resolve(__dirname, 'runtime/types/readonly.d.ts') : resolve(__dirname, 'runtime/types/write.d.ts'),
+        path: opts.readOnly ? resolveRuntimeModule('./types/readonly.d.ts') : resolveRuntimeModule('./types/write.d.ts'),
       })
     })
   },

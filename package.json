@@ -1,8 +1,9 @@
 {
   "name": "lyonkit-ts-client",
+  "type": "module",
   "version": "2.6.1",
   "private": "true",
-  "packageManager": "pnpm@7.31.0",
+  "packageManager": "pnpm@8.13.1",
   "description": "Lyonkit typescript clients and related packages",
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
@@ -10,18 +11,19 @@
     "release": "changelogen --release --recursive",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "typecheck": "pnpm -r run typecheck",
     "@ts-client": "pnpm --filter @lyonkit/ts-client",
     "@nuxt": "pnpm --filter @lyonkit/nuxt"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.38.4",
-    "bumpp": "9.0.0",
-    "changelogen": "0.5.2",
-    "eslint": "8.37.0",
-    "typescript": "5.0.2"
+    "@antfu/eslint-config": "^2.6.1",
+    "bumpp": "^9.2.1",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
   },
   "volta": {
-    "node": "18.15.0",
-    "npm": "9.6.4"
+    "node": "20.10.0",
+    "npm": "10.2.5"
   }
 }

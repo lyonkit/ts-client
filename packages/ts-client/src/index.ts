@@ -106,9 +106,9 @@ export type Locales = Record<string, any>
 export interface LocaleOutput {
   id: number
   namespace: string
-  lang: String
-  createdAt: String
-  updatedAt: String
+  lang: string
+  createdAt: string
+  updatedAt: string
 }
 
 export interface FileFilter {
@@ -131,7 +131,7 @@ export interface FileInput {
   metadata?: Record<string, string>
 }
 
-export interface LyonkitClientOptions { endpoint?: string; apiKey: string }
+export interface LyonkitClientOptions { endpoint?: string, apiKey: string }
 
 export function createLyonkitReadonlyApiClient({ endpoint = 'https://lyonkit.leo-coletta.fr', apiKey }: LyonkitClientOptions) {
   const fetchClient: $Fetch = $fetch.create({
@@ -236,7 +236,7 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     return fetchClient('/page', { method: 'POST', body: page })
   }
 
-  async function updatePage({ pageId, update }: { pageId: number; update: PageInput }): Promise<PageOutput> {
+  async function updatePage({ pageId, update }: { pageId: number, update: PageInput }): Promise<PageOutput> {
     return fetchClient(`/page/${pageId}`, { method: 'PUT', body: update })
   }
 
@@ -250,11 +250,11 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     return fetchClient('/blok', { method: 'POST', body: blok })
   }
 
-  async function updateBlok({ blokId, update }: { blokId: number; update: BlokInput }): Promise<BlokOutput> {
+  async function updateBlok({ blokId, update }: { blokId: number, update: BlokInput }): Promise<BlokOutput> {
     return fetchClient(`/blok/${blokId}`, { method: 'PUT', body: update })
   }
 
-  async function patchBlok({ blokId, patch }: { blokId: number; patch: BlokPatchInput }): Promise<BlokOutput> {
+  async function patchBlok({ blokId, patch }: { blokId: number, patch: BlokPatchInput }): Promise<BlokOutput> {
     return fetchClient(`/blok/${blokId}`, { method: 'PATCH', body: patch })
   }
 
@@ -268,7 +268,7 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     return fetchClient('/post', { method: 'POST', body: post })
   }
 
-  async function updatePost({ postId, update }: { postId: number; update: PostInput }): Promise<PostOutput> {
+  async function updatePost({ postId, update }: { postId: number, update: PostInput }): Promise<PostOutput> {
     return fetchClient(`/post/${postId}`, { method: 'PUT', body: update })
   }
 
@@ -282,7 +282,7 @@ export function createLyonkitWriteApiClient(options: LyonkitClientOptions) {
     return fetchClient('/quote', { method: 'POST', body: quote })
   }
 
-  async function updateQuote({ quoteId, update }: { quoteId: number; update: QuoteInput }): Promise<QuoteOutput> {
+  async function updateQuote({ quoteId, update }: { quoteId: number, update: QuoteInput }): Promise<QuoteOutput> {
     return fetchClient(`/quote/${quoteId}`, { method: 'PUT', body: update })
   }
 

@@ -1,45 +1,45 @@
 {
-  schedule: [],
-  dependencyDashboard: true,
-  rangeStrategy: "bump",
-  prConcurrentLimit: 3,
-  prHourlyLimit: 10,
-  assignees: ["leo91000"],
-  timezone: "Europe/Paris",
-  labels: ["renovate", "deps"],
-  lockFileMaintenance: {
-    enabled: true,
-    automerge: true
+  "schedule": [],
+  "dependencyDashboard": true,
+  "rangeStrategy": "bump",
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 10,
+  "assignees": ["leo91000"],
+  "timezone": "Europe/Paris",
+  "labels": ["renovate", "deps"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
   },
-  packageRules: [
+  "packageRules": [
     {
-      matchUpdateTypes: ["major"],
-      stabilityDays: 7
+      "matchUpdateTypes": ["major"],
+      "stabilityDays": 7
     },
     {
-      matchUpdateTypes: ["minor", "patch"],
-      groupName: "all non-major dependencies",
-      groupSlug: "all-minor-patch",
-      automerge: true,
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "automerge": true
     },
     {
-      matchPackagePatterns: ['eslint'],
-      labels: ["linting"],
-      groupName: 'Linting packages',
-      groupSlug: 'lint',
-      automerge: true,
+      "matchPackagePatterns": ["eslint"],
+      "labels": ["linting"],
+      "groupName": "Linting packages",
+      "groupSlug": "lint",
+      "automerge": true
     },
     {
-      matchPackageNames: ["node", "@types/node", "npm", "pnpm"],
-      groupName: "Node.js & NPM",
-      groupSlug: "node-npm",
-      automerge: false,
+      "matchPackageNames": ["node", "@types/node", "npm", "pnpm"],
+      "groupName": "Node.js & NPM",
+      "groupSlug": "node-npm",
+      "automerge": false
     },
     {
-      matchPackagePrefixes: ['nuxt3', 'nuxt', "@nuxt", "nuxi"],
-      groupName: 'Nuxt 3',
-      groupSlug: 'nuxt3',
-      automerge: false,
+      "matchPackagePrefixes": ["nuxt3", "nuxt", "@nuxt", "nuxi"],
+      "groupName": "Nuxt 3",
+      "groupSlug": "nuxt3",
+      "automerge": false
     }
   ]
 }
