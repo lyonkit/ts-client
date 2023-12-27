@@ -30,7 +30,7 @@
     "standard-version": "^9.5.0"
   },
   "standard-version": {
-    "packageFiles": [
+    "bumpFiles": [
       {
         "filename": "packages/*/package.json",
         "type": "json"
