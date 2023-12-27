@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v2.6.2
+
+[compare changes](https://github.com/lyonkit/ts-client/compare/v2.6.1...v2.6.2)
+
 ## v2.6.1
 
 
