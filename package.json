@@ -1,14 +1,14 @@
 {
   "name": "lyonkit-ts-client",
   "type": "module",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "private": "true",
   "packageManager": "pnpm@8.13.1",
   "description": "Lyonkit typescript clients and related packages",
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
     "build": "rimraf packages/*/dist && pnpm -r run build",
-    "release": "standard-version && git push --follow-tags origin main && pnpm -r run publish",
+    "release": "standard-version",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "pnpm -r run typecheck",
