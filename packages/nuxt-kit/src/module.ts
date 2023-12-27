@@ -2,8 +2,8 @@ import {
   addImports,
   addPluginTemplate,
   addTemplate,
+  createResolver,
   defineNuxtModule,
-  resolvePath,
 } from '@nuxt/kit'
 import type { NuxtModule } from '@nuxt/schema'
 import { join } from 'pathe'
@@ -39,7 +39,8 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
     readOnly: true,
   },
   async setup(opts, nuxt) {
-    const resolveRuntimeModule = (path: string) => join(resolvePath('./runtime'), path)
+    const resolver = createResolver(import.meta.url)
+    const resolveRuntimeModule = (path: string) => join(resolver.resolve('./runtime'), path)
 
     // Inject options via virtual template
     nuxt.options.alias['#lyonkit'] = addTemplate({
