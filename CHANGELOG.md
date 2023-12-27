@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.7](https://github.com/lyonkit/ts-client/compare/v2.6.6...v2.6.7) (2023-12-27)
+
+
+### Bug Fixes
+
+* Fix incorrect resolver path ([85d29bd](https://github.com/lyonkit/ts-client/commit/85d29bd0d219555353d7e00d7d97092a2b23ae37))
+
 ### [2.6.6](https://github.com/lyonkit/ts-client/compare/v2.6.5...v2.6.6) (2023-12-27)
 
 ### [2.6.5](https://github.com/lyonkit/ts-client/compare/v2.6.4...v2.6.5) (2023-12-27)
