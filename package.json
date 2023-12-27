@@ -8,7 +8,7 @@
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
     "build": "rimraf packages/*/dist && pnpm -r run build",
-    "release": "changelogen --release --recursive",
+    "release": "standard-version && git push --follow-tags origin main && pnpm -r run publish",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "pnpm -r run typecheck",
@@ -25,5 +25,16 @@
   "volta": {
     "node": "20.10.0",
     "npm": "10.2.5"
+  },
+  "dependencies": {
+    "standard-version": "^9.5.0"
+  },
+  "standard-version": {
+    "packageFiles": [
+      {
+        "filename": "packages/*/package.json",
+        "type": "json"
+      }
+    ]
   }
 }
