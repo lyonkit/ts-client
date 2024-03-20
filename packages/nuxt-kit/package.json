@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.9.0",
-    "pathe": "^1.1.1"
+    "pathe": "^1.1.2"
   },
   "devDependencies": {
     "@lyonkit/ts-client": "workspace:^",
