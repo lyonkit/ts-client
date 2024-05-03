@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs'
+import { template } from 'lodash-es'
 import {
   addImports,
   addPluginTemplate,
@@ -45,7 +47,10 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
     // Inject options via virtual template
     nuxt.options.alias['#lyonkit'] = addTemplate({
       filename: 'lyonkit.mjs',
-      src: resolveRuntimeModule('./templates/composable'),
+      getContents({ options }) {
+        const contents = readFileSync(resolveRuntimeModule('./templates/composable'), 'utf-8')
+        return template(contents)({ options })
+      },
       options: {
         config: opts,
       },
