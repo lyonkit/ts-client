@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
       standard-version:
         specifier: ^9.5.0
         version: 9.5.0
@@ -36,6 +33,9 @@ importers:
       '@nuxt/kit':
         specifier: ^3.9.0
         version: 3.9.0(rollup@3.29.4)
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
       pathe:
         specifier: ^1.1.1
         version: 1.1.1
@@ -49,6 +49,9 @@ importers:
       '@nuxt/schema':
         specifier: ^3.9.0
         version: 3.9.0(rollup@3.29.4)
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
 
   packages/ts-client:
     dependencies:
@@ -1045,6 +1048,16 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+    dev: true
+
+  /@types/lodash-es@4.17.12:
+    resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==}
+    dependencies:
+      '@types/lodash': 4.17.0
+    dev: true
+
+  /@types/lodash@4.17.0:
+    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
     dev: true
 
   /@types/mdast@3.0.15:
