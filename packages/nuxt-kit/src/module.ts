@@ -58,7 +58,10 @@ export default <NuxtModule<ModuleOptions>> defineNuxtModule<ModuleOptions>({
 
     addPluginTemplate({
       filename: 'lyonkit-plugin.mjs',
-      src: resolveRuntimeModule('./templates/plugin'),
+      getContents({ options }) {
+        const contents = readFileSync(resolveRuntimeModule('./templates/plugin'), 'utf-8')
+        return template(contents)({ options })
+      },
       options: {
         apiKey: opts.apiKey,
         readOnly: opts.readOnly ?? false,
