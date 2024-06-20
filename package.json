@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.6.7",
   "private": "true",
-  "packageManager": "pnpm@8.13.1",
+  "packageManager": "pnpm@8.15.8",
   "description": "Lyonkit typescript clients and related packages",
   "author": "Léo Coletta <contact@leo-coletta.fr>",
   "scripts": {
@@ -23,8 +23,8 @@
     "typescript": "^5.3.3"
   },
   "volta": {
-    "node": "20.10.0",
-    "npm": "10.2.5"
+    "node": "20.15.0",
+    "npm": "10.8.1"
   },
   "dependencies": {
     "standard-version": "^9.5.0"
