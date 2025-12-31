@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
-    "bumpp": "^9.2.1",
-    "changelogen": "^0.5.5",
+    "bumpp": "^9.11.1",
+    "changelogen": "^0.6.2",
     "eslint": "^8.56.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.9.3"
   },
   "volta": {
     "node": "20.10.0",
